@@ -252,4 +252,39 @@ input {
 .loader img {
   height: 80px;
   width: 80px;
+  animation: lightson 0.75s ease 4 forwards;
+}
+
+@keyframes lightson {
+  0% {
+    opacity: 0;
+    /* text-shadow: 0px 0px 0px #fe1dad, 0px 0px 0px #fe1dad, 0px 0px 0px #fe1dad;
+    box-shadow: 0px 0px 0px 0px #fe1dad, 0px 0px 0px 0px #fe1dad; */
+    /* 0px 0px 0px 0px #fe1dad, inset 0px 0px 0px #fe1dad; */
+  }
+  20% {
+    opacity: 0.5;
+    /* text-shadow: 0px 0px 2.5px #fe1dad, 0px 0px 5px #fe1dad,
+      1px 1px 25px #fe1dad;
+    box-shadow: 0px 0px 5px 0px #fe1dad, 0px 0px 10px 0px #fe1dad,
+      0px 0px 50px 0px #fe1dad, inset 0px 0px 20px #fe1dad; */
+  }
+  40% {
+    opacity: 1;
+    /* text-shadow: 0px 0px 1px #fe1dad, 0px 0px 2px #fe1dad, 0px 0px 10px #fe1dad;
+    box-shadow: 0px 0px 2px 0px #fe1dad, 0px 0px 5px 0px #fe1dad,
+      0px 0px 25px 0px #fe1dad, inset 0px 0px 10px #fe1dad; */
+  }
+  50% {
+    opacity: 0.5;
+    /* text-shadow: 0px 0px 5px #fe1dad, 0px 0px 10px #fe1dad, 1px 1px 50px #fe1dad;
+    box-shadow: 0px 0px 10px 0px #fe1dad, 0px 0px 20px 0px #fe1dad,
+      0px 0px 100px 0px #fe1dad, inset 0px 0px 30px #fe1dad; */
+  }
+  100% {
+    opacity: 1;
+    /* text-shadow: 0px 0px 5px #fe1dad, 0px 0px 10px #fe1dad, 1px 1px 50px #fe1dad;
+    box-shadow: 0px 0px 10px 0px #fe1dad, 0px 0px 30px 0px #fe1dad,
+      0px 0px 100px 0px #fe1dad, inset 0px 0px 30px #fe1dad; */
+  }
 }
