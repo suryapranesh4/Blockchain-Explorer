@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import getWalletBalance from "../api/accountBalance";
-import { walletAddress } from "../hardcodedData/const";
+import { walletAddress } from "../utils/const";
 import "./index.css";
 import Loader from "./Loader";
 
@@ -29,11 +29,13 @@ export default function Wallet() {
         <div className="walletWindow">
           <div className="transferData">
             <strong>Address </strong>
-            <span>{walletAddress}</span>
+            <span>{walletAddress.toUpperCase()}</span>
           </div>
           <div className="transferData">
             <strong>Balance </strong>
-            <span>{walletBalance}</span>
+            <span>
+              {walletBalance} <b>ETH</b>
+            </span>
           </div>
         </div>
       )}

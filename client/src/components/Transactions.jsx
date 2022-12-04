@@ -33,7 +33,7 @@ export default function Transactions() {
             let {
               receiptHash,
               status,
-              timestamp,
+              updatedAt: timestamp,
               source,
               destination,
               amount,

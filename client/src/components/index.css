@@ -218,6 +218,12 @@ input {
   padding: 16px;
   border: 1px solid var(--textcolor);
   border-radius: 6px;
+  min-height: 350px;
+  height: 100%;
+}
+
+.transferReceipt .loader {
+  min-height: 250px;
 }
 
 .wallet {

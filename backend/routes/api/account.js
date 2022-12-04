@@ -1,13 +1,13 @@
 const express = require("express");
 const router = express.Router();
 
-const { getAddress, getBalance } = require("../../models/accounts");
+const { getAddress, getBalance } = require("../../modules/accounts");
 
-router.get("/addresses", (req, res) => {
+router.get("/addresses", async (req, res) => {
   console.log("GET /account/addresses Route called");
 
   try {
-    let nodeAddresses = getAddress();
+    let nodeAddresses = await getAddress();
     console.log("Node Addresses :", nodeAddresses);
     return res.send({ addresses: nodeAddresses }).status(200);
   } catch (error) {
@@ -16,12 +16,13 @@ router.get("/addresses", (req, res) => {
   }
 });
 
-router.get("/balance/:address", (req, res) => {
+router.get("/balance/:address", async (req, res) => {
+  const address = req.params.address;
   console.log("GET /account/balance Route called");
-  console.log("Retrieving balance of account : ", req.params.address);
+  console.log("Retrieving balance of account : ", address);
 
   try {
-    let walletBalance = getBalance();
+    let walletBalance = await getBalance(address);
     console.log("Wallet Balance :", walletBalance);
     return res.send({ balance: walletBalance }).status(200);
   } catch (error) {

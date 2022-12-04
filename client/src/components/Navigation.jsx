@@ -6,7 +6,7 @@ import transactionIcon from "./../images/transaction.png";
 import copyrightIcon from "./../images/copyright.png";
 import addressIcon from "./../images/address.png";
 import "./index.css";
-import { NavigationPages, getSelectedPage } from "../hardcodedData/const";
+import { NavigationPages, getSelectedPage } from "../utils/const";
 
 export default function Navigation() {
   const location = useLocation();

@@ -29,11 +29,16 @@ export default function Addresses() {
       ) : addresses && addresses.length > 0 ? (
         <div className="nodeAddresses">
           {addresses.map((address, i) => {
-            return (
-              <div className="addressLink" key={i}>
-                <Link to={`/transfer/${address}`}>{address}</Link>
-              </div>
-            );
+            if (i !== 0)
+              // To remove the first account as it is ~ hardcoded "From" account
+              return (
+                <div className="addressLink" key={i}>
+                  <Link to={`/transfer/${address}`}>
+                    {address.toUpperCase()}
+                  </Link>
+                </div>
+              );
+            else return null;
           })}
         </div>
       ) : (
