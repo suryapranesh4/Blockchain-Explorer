@@ -17,6 +17,9 @@ npm install
 # Install dependencies for client
 npm run client-install
 
+# Add .env file
+Include mongoDB local connection URI and server PORT (.env.example is available for reference)
+
 # Run the client & server with concurrently
 npm run dev
 
