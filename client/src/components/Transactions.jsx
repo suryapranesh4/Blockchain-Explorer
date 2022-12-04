@@ -22,6 +22,9 @@ export default function Transactions() {
     }, 2000);
   }, []);
 
+  const getStatus = (status) =>
+    status === "true" || status === "SUCCESS" ? "SUCCESS" : "FAILED";
+
   return (
     <div className="transactions">
       <div className="title">Transaction History</div>
@@ -47,7 +50,7 @@ export default function Transactions() {
                 </div>
                 <div className="transactionData">
                   <strong>Status </strong>
-                  <span>{status}</span>
+                  <span>{getStatus(status)}</span>
                 </div>
                 <div className="transactionData">
                   <strong>Timestamp </strong>
