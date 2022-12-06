@@ -17,20 +17,30 @@ npm install
 # Install dependencies for client
 npm run client-install
 
+# Install dependencies for hardhat-ethereum
+npm run hardhat-install
+
 # Add .env file
 Include mongoDB local connection URI and server PORT (.env.example is available for reference)
 
-# Run the client & server with concurrently
+# Run the client,server and local hardhat network concurrently
 npm run dev
 
-# To Run the Express server only (optional)
+
+# Individual scripts to run local server :
+# To Run the Hardhat server only
+npm run hardhat
+
+# To Run the Express server only
 npm run server
 
-# To Run the React client only (optional)
+# To Run the React client only
 npm run client
 ```
 
-Server runs on http://localhost:5000 and client on http://localhost:3000 in the browser
+Server runs on http://localhost:5000,
+Hardhat runs on http://localhost:8545,
+and client on http://localhost:3000 in the browser
   
   
 The Application includes UI for transactions, block node addresses with transfer, transfer receipt and wallet details
