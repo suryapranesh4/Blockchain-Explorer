@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-const morgan = require("morgan");
 const bodyParser = require("body-parser");
 require("dotenv").config();
 
@@ -13,8 +12,6 @@ const app = express();
 
 // CORS Middleware
 app.use(cors());
-// Logger Middleware
-app.use(morgan("dev"));
 // Bodyparser Middleware
 app.use(bodyParser.json());
 

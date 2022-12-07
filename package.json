@@ -6,12 +6,12 @@
   "scripts": {
     "client-install": "cd client && npm install",
     "hardhat-install": "cd hardhat-ethereum && npm install",
-    "start": "node server.js",
     "server": "nodemon server.js --exec babel-node --presets babel-preset-env",
     "client": "cd client && npm start",
     "hardhat": "cd hardhat-ethereum && npx hardhat node",
     "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run hardhat\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd hardhat-ethereum && npm install && cd .. && cd client && npm install && npm run build"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd hardhat-ethereum && npm install && cd .. && cd client && npm install && npm run build",
+    "postbuild": "NPM_CONFIG_PRODUCTION=false cd hardhat-ethereum && npm install && cd .. && cd client && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
@@ -22,8 +22,7 @@
     "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",
     "hardhat": "^2.12.3",
-    "nodemon": "^2.0.20",
-    "morgan": "^1.9.1"
+    "nodemon": "^2.0.20"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
