@@ -9,9 +9,8 @@
     "server": "nodemon server.js --exec babel-node --presets babel-preset-env",
     "client": "cd client && npm start",
     "hardhat": "cd hardhat-ethereum && npx hardhat node",
-    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run hardhat\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd hardhat-ethereum && npm install && cd .. && cd client && npm install && npm run build",
-    "build": "NPM_CONFIG_PRODUCTION=false cd hardhat-ethereum && npm install && cd .. && cd client && npm install && npm run build"
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
