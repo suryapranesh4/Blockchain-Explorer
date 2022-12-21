@@ -1,7 +1,7 @@
 # Flash Blockchain Explorer Application
  
  ## Check out the application via the following link </br>
- [Flash Blockchain Application](https://flash-blockchain-explorer.herokuapp.com)
+ [Flash Blockchain Application](https://flash-blockchain-explorer.onrender.com)
   <br/>
   
 ### Quick start 
