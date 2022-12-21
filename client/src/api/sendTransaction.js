@@ -1,7 +1,9 @@
+import { baseURL } from "../utils/const";
+
 export default async function sendTransaction(source, destination, value) {
   let transactionReceipt = {};
   try {
-    await fetch("/transaction/send", {
+    await fetch(`${baseURL}/transaction/send`, {
       method: "POST",
       headers: {
         Accept: "application/json",

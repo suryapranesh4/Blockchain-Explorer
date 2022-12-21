@@ -20,4 +20,9 @@ const getSelectedPage = (route) => {
   }
 };
 
-export { walletAddress, getSelectedPage, NavigationPages };
+const baseURL =
+  process.env.NODE_ENV === "production"
+    ? `https://flash-blockchain-explorer.onrender.com`
+    : ``;
+
+export { walletAddress, getSelectedPage, NavigationPages, baseURL };

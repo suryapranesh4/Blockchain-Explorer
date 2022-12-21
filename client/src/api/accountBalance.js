@@ -1,7 +1,9 @@
+import { baseURL } from "../utils/const";
+
 export default async function getWalletBalance(walletAddress) {
   let balance = "";
   try {
-    await fetch(`/account/balance/${walletAddress}`)
+    await fetch(`${baseURL}/account/balance/${walletAddress}`)
       .then((response) => response.json())
       .then((data) => (balance = data.balance));
 
