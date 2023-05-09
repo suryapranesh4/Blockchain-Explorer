@@ -57,4 +57,3 @@ The Application includes UI for transactions, block node addresses with transfer
 
 #### Wallet component : <br/>
 ![Blockchain Explorer Application](wallet.png "Blockchain Explorer Application") <br/>
-# HyperLedgerFabric-Gift_Card_Management
